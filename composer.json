@@ -1,13 +1,5 @@
 {
-  "require" : {
-    "silex/silex": "^2.0.4",
-    "monolog/monolog": "^1.22",
-    "twig/twig": "^2.0",
-	"php" : "^5.5 || ^7.0",
-    "ext-mysqli": "*",
-    "symfony/twig-bridge": "^3"
-  },
-  "require-dev": {
-    "heroku/heroku-buildpack-php": "*"
-  }
+    "require": {
+        "ext-mysqli": "*"
+    }
 }
