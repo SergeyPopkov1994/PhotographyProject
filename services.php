@@ -1,7 +1,14 @@
 <?php
 //include "php/database.php";
 //include "login.php";
-  $dbc = mysqli_connect('localhost', 'mysql', 'mysql', 'db_photography');
+  //$dbc = mysqli_connect('localhost', 'mysql', 'mysql', 'db_photography');
+  $cleardb_url      = "CLEARDB_DATABASE_URL";
+  $cleardb_server   = "eu-cdbr-west-03.cleardb.net";
+  $cleardb_username = "b12e62a1768d64";
+  $cleardb_password = "81f3508e";
+  $cleardb_db       = "heroku_e40b1a96c2d350f";
+
+  $dbc = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
   $result = mysqli_query($dbc, "SELECT * from `users` where role = 1");
 
 
