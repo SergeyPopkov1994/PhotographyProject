@@ -152,7 +152,7 @@
                                         //mysqli_close($dbc);
                                         //$photograph_id = $_POST['photographId'];
                                         //echo $photograph_id;
-                                        $dbc = mysqli_connect('localhost', 'mysql', 'mysql', 'db_photography');
+                                        //$dbc = mysqli_connect('localhost', 'mysql', 'mysql', 'db_photography');
                                         //$resultPortfolio = $dbc->query("SELECT * FROM `portfolio` WHERE photograph_id = '$user_id' ORDER BY id");
                                         $resultPortfolio = $dbc->query("SELECT * FROM `portfolio` ORDER BY photograph_id");
                                         //while($row = $resultPortfolio->fetch_assoc()) {

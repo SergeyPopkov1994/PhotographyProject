@@ -84,7 +84,14 @@
          <?php
            if(isset($_POST['upload_1'])) {
              if(!empty($_FILES['avatarUpload']['tmp_name'])) $img = addslashes(file_get_contents($_FILES['avatarUpload']['tmp_name']));
-             $dbc = mysqli_connect('localhost', 'mysql', 'mysql', 'db_photography');
+             //$dbc = mysqli_connect('localhost', 'mysql', 'mysql', 'db_photography');
+             $cleardb_url      = "CLEARDB_DATABASE_URL";
+             $cleardb_server   = "eu-cdbr-west-03.cleardb.net";
+             $cleardb_username = "b12e62a1768d64";
+             $cleardb_password = "81f3508e";
+             $cleardb_db       = "heroku_e40b1a96c2d350f";
+
+             $dbc = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
              $user_id = $_COOKIE['user_id'];
              $dbc->query("UPDATE users set avatar = '$img' WHERE user_id = '$user_id'");
              $dbc->close();
@@ -99,7 +106,14 @@
        <?php
          if(isset($_POST['upload_2'])) {
            if(!empty($_FILES['photoUpload']['tmp_name'])) $img = addslashes(file_get_contents($_FILES['photoUpload']['tmp_name']));
-           $dbc = mysqli_connect('localhost', 'mysql', 'mysql', 'db_photography');
+           //$dbc = mysqli_connect('localhost', 'mysql', 'mysql', 'db_photography');
+           $cleardb_url      = "CLEARDB_DATABASE_URL";
+           $cleardb_server   = "eu-cdbr-west-03.cleardb.net";
+           $cleardb_username = "b12e62a1768d64";
+           $cleardb_password = "81f3508e";
+           $cleardb_db       = "heroku_e40b1a96c2d350f";
+
+           $dbc = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
            $user_id = $_COOKIE['user_id'];
            $dbc->query("INSERT INTO `portfolio` (`photograph_id`, `photo`) VALUES ('$user_id','$img')");
            $dbc->close();
@@ -114,7 +128,14 @@
     <h1 class="h3 text-center my-4">Мое портфолио</h1>
     <div class="row">
       <?php
-       $dbc = mysqli_connect('localhost', 'mysql', 'mysql', 'db_photography');
+       //$dbc = mysqli_connect('localhost', 'mysql', 'mysql', 'db_photography');
+       $cleardb_url      = "CLEARDB_DATABASE_URL";
+       $cleardb_server   = "eu-cdbr-west-03.cleardb.net";
+       $cleardb_username = "b12e62a1768d64";
+       $cleardb_password = "81f3508e";
+       $cleardb_db       = "heroku_e40b1a96c2d350f";
+
+       $dbc = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
        $user_id = $_COOKIE['user_id'];
        $result = $dbc->query("SELECT * FROM `portfolio` WHERE photograph_id = '$user_id' ORDER BY id");
        mysqli_close($dbc);
