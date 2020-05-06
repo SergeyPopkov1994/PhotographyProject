@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="full-height">
 <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165732234-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-165732234-1');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Фото-сайт. Услуги</title>
@@ -20,7 +29,7 @@
           webvisor:true
      });
    </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/62596570" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+   <noscript><div><img src="https://mc.yandex.ru/watch/62596570" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
 <body style="background: url(../static/img/photo2.jpg) no-repeat; -moz-background-size: 100%;
